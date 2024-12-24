@@ -6,6 +6,7 @@ import { cn } from '@/lib/utils'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import GlobalSearch from './global-search'
+import Mobile from './mobile'
 
 function Navbar() {
 	const pathname = usePathname()
@@ -15,7 +16,7 @@ function Navbar() {
 			<div className='container max-w-6xl mx-auto h-[10vh] w-full flex items-center justify-between'>
 				{/* Logo */}
 				<Link href={'/'}>
-					<h1 className='text-4xl font-creteRound'>Sammi</h1>
+					<h1 className='text-4xl font-creteRound'>Blog</h1>
 				</Link>
 				{/* Nav links */}
 				<div className='gap-2 hidden md:flex'>
@@ -37,6 +38,7 @@ function Navbar() {
 					<GlobalSearch />
 					<ModeToggle />
 				</div>
+				<Mobile />
 			</div>
 		</div>
 	)
